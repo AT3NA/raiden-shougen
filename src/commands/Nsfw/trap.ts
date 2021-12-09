@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
             command: 'trap',
             description: `Will send you random trap girl image.`,
             aliases: ['trap'],
-            category: 'trap',
+            category: 'nsfw',
             usage: `${client.config.prefix}trap`,
             baseXp: 50
         })
