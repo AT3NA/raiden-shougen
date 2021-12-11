@@ -33,7 +33,7 @@ export default class Command extends BaseCommand {
 			"https://c.tenor.com/mMRNByRo8XMAAAPo/nakano-yotsuba-disturbance.mp4",
 			"https://c.tenor.com/yQ_zLRi6zUkAAAPo/yotsuba-nakano.mp4",
 			"https://c.tenor.com/DpLoI6rRq4YAAAPo/nakano-yotsuba-ribbon.mp4",
-			"https://c.tenor.com/dEnq15fNv6kAAAPo/aaaa-the-quintessential-quintuplets.mp4,"
+			"https://c.tenor.com/dEnq15fNv6kAAAPo/aaaa-the-quintessential-quintuplets.mp4",
 			"https://c.tenor.com/i1fRMMMvu38AAAPo/yotsuba-nakano-the-quintessential-quintuplets.mp4",
 			"https://c.tenor.com/l2F9LrkJEKYAAAPo/yotsuba-nakano.mp4",
 		];
