@@ -1,6 +1,6 @@
 /** @format */
 
-import { MessageType } from "@adiwajshing/baileys";
+import { MessageType, Mimetype } from "@adiwajshing/baileys";
 import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
 import WAClient from "../../lib/WAClient";
@@ -28,15 +28,16 @@ export default class Command extends BaseCommand {
 		if (!joined)
 			return void (await M.reply(`Please provide the Broadcast Message.`));
 		const term = joined.trim();
-		const images = [
-			"https://wallpapercave.com/wp/wp3144753.jpg",
-			"https://wallpapercave.com/wp/wp4782018.jpg",
-			"https://wallpaperaccess.com/full/1326836.jpg",
-			"https://wallpapermemory.com/uploads/711/chitoge-kirisaki-wallpaper-full-hd-323316.jpg",
-			"https://data.whicdn.com/images/304776416/original.jpg",
-			"https://i.pinimg.com/564x/ca/e7/8a/cae78ad7f8e6459ad20bde350e2eb78b.jpg",
+		const gifs = [
+			"https://c.tenor.com/qGBj-9nx7rsAAAPo/what-the-quintessential-quintuplets.mp4",
+			"https://c.tenor.com/mMRNByRo8XMAAAPo/nakano-yotsuba-disturbance.mp4",
+			"https://c.tenor.com/yQ_zLRi6zUkAAAPo/yotsuba-nakano.mp4",
+			"https://c.tenor.com/DpLoI6rRq4YAAAPo/nakano-yotsuba-ribbon.mp4",
+			"https://c.tenor.com/dEnq15fNv6kAAAPo/aaaa-the-quintessential-quintuplets.mp4,
+			"https://c.tenor.com/i1fRMMMvu38AAAPo/yotsuba-nakano-the-quintessential-quintuplets.mp4",
+			"https://c.tenor.com/l2F9LrkJEKYAAAPo/yotsuba-nakano.mp4",
 		];
-		const selected = images[Math.floor(Math.random() * images.length)];
+		const selected = gifs[Math.floor(Math.random() * gifs.length)];
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const chats: any = this.client.chats
 			.all()
@@ -46,7 +47,8 @@ export default class Command extends BaseCommand {
 			.filter((v) => v);
 		for (let i = 0; i < chats.length; i++) {
 			const text = `*🌟「 CHITOGE BROADCAST 」🌟*\n\n${term}\n\n Regards ~ *${M.sender.username}*`;
-			this.client.sendMessage(chats[i], { url: selected }, MessageType.image, {
+			this.client.sendMessage(chats[i], { url: selected }, MessageType.video, {
+				mimetype: Mimetype.gif,
 				caption: `${text}`,
 				contextInfo: {
 					mentionedJid: M.groupMetadata?.participants.map((user) => user.jid),
