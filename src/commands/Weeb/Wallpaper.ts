@@ -1,5 +1,3 @@
-
-  
 /** @format */
 
 import { AnimeWallpaper } from "anime-wallpapers";
