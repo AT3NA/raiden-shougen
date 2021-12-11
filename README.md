@@ -40,7 +40,7 @@
 -   Make sure to follow the ESLint Rules while editing the code and run
     `yarn run prettier-format` before opening PRs
 
-##  🚀 Our Amazing Contributors
+##  🚀 Official Bot Contributors
 
 <a href="https://github.com/ShineiIchijo/Chitoge/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ShineiIchijo/Chitoge" />
