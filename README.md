@@ -59,3 +59,10 @@ for more information.
 ## 🎗Help
 Please give this repo a ⭐ if it helped you.
  
+## 🚀The WhatsApp bots that I recomended🚀
+<details>
+<summary>Click Here</summary>
+
+![Kaoi][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=PrajjwalDatir&repo=Kaoi&theme=buefy)](https://github.com/PrajjwalDatir/kaoi)
+
+![Chitoge][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=ShineiIchijo&repo=Chitoge&theme=buefy)](https://github.com/ShinNouzen/Chitoge)
