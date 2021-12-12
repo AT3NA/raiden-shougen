@@ -38,7 +38,7 @@ export default class Command extends BaseCommand {
             let text = `
 ╭─「(づ￣ 3￣)づ」
 │⋊ ᴜꜱᴇʀ: *${M.sender.username}*
-│⋊ ɴᴀᴍᴇ: Yotsuba
+│⋊ ɴᴀᴍᴇ: Yᴏᴛsᴜʙᴀ
 │⋊ ᴘʀᴇꜰɪx: ${this.client.config.prefix}
 │⋊ ᴏᴡɴᴇʀ: <${this.client.config.prefix}mod>
 ╰────────────┈平和                            \n\n`
@@ -52,10 +52,10 @@ export default class Command extends BaseCommand {
             return void this.client.sendMessage(M.from, { url: chitoge }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `${text} 
- ──❅┈[ ᖇᎥᑎ ᗷᗝ丅 ]┈❅───
+ ──❅┈[ 𝒀𝒐𝒕𝒔𝒖𝒃𝒂 𝑩𝒐𝒕 ]┈❅───
 ┌────────────┈❅
-│   🧨 Yotsuba
-│   ©️ Synthesized Infinity Botto
+│   🧨 YᴏᴛsUʙᴀ
+│   ©️ ᑕᕼITOᘜᗴ ᗷOT (ᑌᑎᗪᗴᖇ ᘜᗴᑎᗴᖇᗩᒪ ᑭᑌᗷᒪIᑕ ᑌՏᗴ)
 └────────────┈⁂
 ❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
 🎗 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*` }
@@ -78,5 +78,5 @@ export default class Command extends BaseCommand {
         )
     }
 
-    emojis = ['🚀', '🌀', '🎵', '🧿', '⚖️', '🚫','👑', '✨', '📚']
+    emojis = ['🚀', '🌀', '🎵', '🧿', '⚖️', '🚫','👑', '🌝', '📚','✨']
 }
