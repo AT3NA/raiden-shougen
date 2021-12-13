@@ -25,7 +25,7 @@ export default class Command extends BaseCommand {
         const cara = joined.trim()
         console.log(cara)
         
-        const { data } = await axios.get(`https://g.tenor.com/v1/search?q=${cara}&key=LIVDSRZULELA&limit=8`)
+        const { data } = await axios.get(`https://g.tenor.com/v1/search?q=${cara}&key=LIVDSRZULELA&limit=20`)
         
 if ((data as { error: string }).error) return void (await M.reply('Sorry, couldn\'t find'))
         //const i = Math.floor(Math.random() * data.result.length)
