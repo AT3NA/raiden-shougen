@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 				`Don't be a pervert, Baka! This is not an NSFW group.`
 			);
         const term = joined
-	    const {data} = await axios.get(https://api.ichikaa.xyz/api/nhentaipdf?code=379510);
+	    const {data} = await axios.get('https://api.ichikaa.xyz/api/nhentaipdf?code=379510');
 		if(!data) return void M.reply(`couldn't find the doujin`)
         const { native , pretty,default:string} = data.result.title;
        console.log(data.result.thumbnails[0])
