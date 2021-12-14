@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        // fetch result of https://waifu.pics/api/nsfw/waifu from the API using axios
+        // fetch result of https://api.waifu.pics/nsfw/waifu from the API using axios
         const { data } = await axios.get('https://api.waifu.pics/nsfw/waifu')
         if ( !(await this.client.getGroupData(M.from)).nsfw)
             return void M.reply(
