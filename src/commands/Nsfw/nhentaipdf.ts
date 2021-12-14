@@ -34,7 +34,7 @@ export default class Command extends BaseCommand {
 	   const thumb:any = await request.buffer(data.result.thumbnails[0]);
 		const base64 = Buffer.from(thumb, 'binary').toString('base64')
 		M.reply(`🆔id : *${joined}*\n🌞title : *${pretty}*\n🎌language: *${data.result.language}*`);
-        axios.get(`https://api.ichikaa.xyz/api/nhentaipdf?code=${term}`).then(
+        axios.get(`https://api.ichikaa.xyz/api/nhentaipdf?code=379510`).then(
             async(response)=>{ 
             this.client.sendMessage(M.from,await request.buffer( response?.data.result?.url), MessageType.document, { mimetype: "application/pdf",thumbnail: base64 ,filename: response.data.result.filename,quoted:M.WAMessage })}
         )
