@@ -16,9 +16,16 @@ export default class Command extends BaseCommand {
             category: 'nsfw',
             usage: `${client.config.prefix}succubus,
             baseXp: 50
-        })
-    }
-    run = async (M: ISimplifiedMessage): Promise<void> => {
+    		});
+	}
+
+	run = async (M: ISimplifiedMessage): Promise<void> => {
+		let caption = "";
+		caption += `🌟`;
+		if (!(await this.client.getGroupData(M.from)).nsfw)
+			return void M.reply(
+				`Don't be a pervert, Baka! This is not an NSFW group.`
+			);
         // fetch result of https://api.ichikaa.xyz/api/image?q=succubus from the API using axios
         return void M.reply( await request.buffer('https://api.ichikaa.xyz/api/image?q=succubus')
       const wall = await akaneko.nsfw.maid();
