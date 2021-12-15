@@ -1,5 +1,3 @@
-
-  
 import MessageHandler from '../../Handlers/MessageHandler'
 import BaseCommand from '../../lib/BaseCommand'
 import WAClient from '../../lib/WAClient'
@@ -17,7 +15,7 @@ export default class Command extends BaseCommand {
 			category: "nsfw",
 			usage: `${client.config.prefix}succubus`,
 			baseXp: 50,
-		});
+		})
 	}
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
