@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
     }
     run = async (M: ISimplifiedMessage): Promise<void> => {
         // fetch result of https://api.ichikaa.xyz/api/image?q=succubus from the API using axios
-        return void M.reply( await request.buffer(`https://api.ichikaa.xyz/api/image?q=succubus`)
+        return void M.reply( await request.buffer('https://api.ichikaa.xyz/api/image?q=succubus')
         MessageType.image
                     undefined,
                     undefined,
