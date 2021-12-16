@@ -1,6 +1,6 @@
 {
-  "name": "Chitoge",
-  "description": "A WhatsApp Bot With Rich Anime Features.",
+  "name": "Yotsuba",
+  "description": "A WhatsApp Bot With Rich NSFW Features.",
   "keywords": [
       "bot",
       "whatsapp",
@@ -13,7 +13,7 @@
   ],
   "website": "https://github.com/ShinNouzen/Chitoge#readme",
   "repository": "https://github.com//Whatup364/Chitoge.git",
-  "logo": "https://wallpapermemory.com/uploads/711/chitoge-kirisaki-wallpaper-full-hd-323316.jpg",
+  "logo": "https://i.pinimg.com/736x/71/c2/8e/71c28e4ffd58c60aceacffab60db14cc.jpg",
   "success_url": "/",
   "env": {
       "PREFIX": {
