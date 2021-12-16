@@ -12,7 +12,7 @@ export default class Command extends BaseCommand {
             command: 'xxnxx',
             aliases: ['xxx'],
             description: 'Download video from xxnxx ',
-            category: 'nsfw',
+            category: 'media',
             dm: true,
             usage: `${client.config.prefix}xxnxx [name]`
         })
