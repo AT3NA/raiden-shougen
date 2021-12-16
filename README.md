@@ -66,3 +66,7 @@ Please give this repo a ⭐ if it helped you.
 ![Kaoi][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=PrajjwalDatir&repo=Kaoi&theme=buefy)](https://github.com/PrajjwalDatir/kaoi)
 
 ![Chitoge][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=ShineiIchijo&repo=Chitoge&theme=buefy)](https://github.com/ShinNouzen/Chitoge)
+
+![Cara_public][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=iamherok&repo=Cara_public&theme=buefy)](https://github.com/iamherok/Cara_public)
+
+
