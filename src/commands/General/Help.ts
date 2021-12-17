@@ -40,7 +40,7 @@ export default class Command extends BaseCommand {
 │⋊ ᴜꜱᴇʀ: *${M.sender.username}*
 │⋊ ɴᴀᴍᴇ: Yᴏᴛsᴜʙᴀ
 │⋊ ᴘʀᴇꜰɪx: ${this.client.config.prefix}
-│⋊ ᴏᴡɴᴇʀ: *${M.mods.username}*
+│⋊ ᴏᴡɴᴇʀ: *${M.owner.username}*
 ╰────────────┈平和                            \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
