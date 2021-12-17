@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
         if (!joined) return void M.reply('Provide the keywords you wanna search, Baka!')
         const chitoge = joined.trim()
         console.log(chitoge)
-        const { data } = await axios.get(`https://api-xcoders.xyz/api/download/xnxx?url=${chitoge}&apikey=MawfYEaFuf`)
+        const { data } = await axios.get(`https://api.ichikaa.xyz/api/xnxxdl?url=${chitoge}`)
         if ((data as { error: string }).error) return void (await M.reply('Sorry, couldn\'t find'))
         const buffer = await request.buffer(data.result[0].url).catch((e) => {
             return void M.reply(e.message)
