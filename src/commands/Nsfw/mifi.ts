@@ -10,11 +10,11 @@ import { MessageType } from '@adiwajshing/baileys'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'succubus',
-            description: `Will send you random succubus girl img.`,
-            aliases: ['succubus'],
+            command: 'mifi',
+            description: `Will send you random mifi img.`,
+            aliases: ['mifi'],
             category: 'nsfw',
-            usage: `${client.config.prefix}succubus`,
+            usage: `${client.config.prefix}mifi`,
             baseXp: 50
         })
     }
