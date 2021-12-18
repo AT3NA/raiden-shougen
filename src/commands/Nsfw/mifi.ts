@@ -20,8 +20,8 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        // fetch result of https://api.ichikaa.xyz/api/image/milf from the API using axios
-        const { data } = await axios.get('https://api.ichikaa.xyz/api/image/milf')
+        // fetch result of https://api.ichikaa.xyz/api/randomimage/milf?apikey=Kuxw2RRu from the API using axios
+        const { data } = await axios.get('https://api.ichikaa.xyz/api/randomimage/milf?apikey=Kuxw2RRu')
         if ( !(await this.client.getGroupData(M.from)).nsfw)
             return void M.reply(
                 `Don't be a pervert, Baka! This is not an NSFW group.`
