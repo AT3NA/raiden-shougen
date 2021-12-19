@@ -10,7 +10,7 @@ import { MessageType } from '@adiwajshing/baileys'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'nsfwwaifu',
+            command: 'nwaifu',
             description: `Will send you random nsfw waifu image.`,
             aliases: ['nwaifu'],
             category: 'nsfw',
