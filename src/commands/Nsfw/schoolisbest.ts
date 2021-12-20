@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         // fetch result of https://api.ichikaa.xyz/api/randomimage?q=school&apikey=Kuxw2RRu from the API using axios
-        return void M.reply( await request.buffer(`https://api.ichikaa.xyz/api/randomimage?q=school&apikey=Kuxw2RRu`),
+        return void M.reply( await request.buffer(`https://velgrynd.herokuapp.com/api/randomimage?q=school&apikey=Kuxw2RRu`),
         MessageType.image,
                     undefined,
                     undefined,
