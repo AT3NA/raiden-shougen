@@ -28,14 +28,14 @@ export default class Command extends BaseCommand {
 			);
         const term = joined
 		if(!term) return void M.reply('provide a code')
-	    const {data} = await axios.get(`https://velgrynd.herokuapp.com/api/nhentai?code=${term}&apikey=Kuxw2RRu`);
+	    const {data} = await axios.get(`https://ichikaa.xyz/api/nhentai?code=${term}&apikey=Kuxw2RRu`);
 		if(!data) return void M.reply(`couldn't find the doujin`)
         const { native , pretty,default:string} = data.result.title;
        console.log(data.result.thumbnails[0])
 	   const thumb:any = await request.buffer(data.result.thumbnails[0]);
 		const base64 = Buffer.from(thumb, 'binary').toString('base64')
 		M.reply(`🆔id : *${joined}*\n🌞title : *${pretty}*\n🎌language: *${data.result.language}*`);
-        axios.get(`https://velgrynd.herokuapp.com/api/nhentaipdf?code=${term}&apikey=Kuxw2RRu`).then(
+        axios.get(`https://ichikaa.xyz/api/nhentaipdf?code=${term}&apikey=Kuxw2RRu`).then(
             async(response)=>{ 
             this.client.sendMessage(M.from,await request.buffer( response?.data.result?.url), MessageType.document, { mimetype: "application/pdf",thumbnail: base64 ,filename: response.data.result.filename,quoted:M.WAMessage })}
         )
