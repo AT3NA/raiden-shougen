@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
         } catch (err) {
             M.reply(`Profile Picture not Accessible of ${username}`)
             pfp =
-                'https://wallpaperaccess.com/full/5304840.png'
+                'https://images6.alphacoders.com/101/1018395.jpg'
         }
         const exp = (await this.client.getUser(user)).Xp
         let role: string;
