@@ -20,6 +20,10 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
+         if (!(await this.client.getGroupData(M.from)).nsfw)
+         return void M.reply(
+        `Don't be a pervert, Baka! This is not an NSFW group.`
+         );
         // fetch result of https://velgrynd.herokuapp.com/api/randomimage?q=uniform&apikey=Kuxw2RRu from the API using axios
         return void M.reply( await request.buffer(`https://velgrynd.herokuapp.com/api/randomimage?q=uniform&apikey=Kuxw2RRu`),
         MessageType.image,
