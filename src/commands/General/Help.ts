@@ -28,7 +28,8 @@ export default class Command extends BaseCommand {
             for (const command of commands) {
                 const info = this.handler.commands.get(command)
                 if (!command) continue
-                if (!info?.config?.category || info.config.category === 'dev') continue
+                || info.config.category === 'nsfw' || info.config.category === 'dev'
+                In the place of || info.config.category === 'dev'
                 if (Object.keys(categories).includes(info.config.category)) categories[info.config.category].push(info)
                 else {
                     categories[info.config.category] = []
