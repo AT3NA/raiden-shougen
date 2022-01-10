@@ -22,19 +22,26 @@ export default class Command extends BaseCommand {
             './assets/Rin/rin.mp4'
         ]
         let chitoge = n[Math.floor(Math.random() * n.length)]
-        if (!parsedArgs.joined) {
-            const commands = this.handler.commands.keys()
-            const categories: { [key: string]: ICommand[] } = {}
-            for (const command of commands) {
-                const info = this.handler.commands.get(command)
-                if (!command) continue
-                if (!info?.config?.category || info.config.category === 'nsfw' || info.config.category === 'dev') continue
-                if (Object.keys(categories).includes(info.config.category)) categories[info.config.category].push(info)
-                else {
-                    categories[info.config.category] = []
-                    categories[info.config.category].push(info)
-                }
-            }
+	if (!parsedArgs.joined) {
+			const commands = this.handler.commands.keys();
+			const categories: { [key: string]: ICommand[] } = {};
+			for (const command of commands) {
+				const info = this.handler.commands.get(command);
+				if (!command) continue;
+				if (!info?.config?.category || info.config.category === "dev") continue;
+				if (
+					!info?.config?.category ||
+					(info.config.category === "nsfw" &&
+						!(await this.client.getGroupData(M.from)).nsfw)
+				)
+					continue;
+				if (Object.keys(categories).includes(info.config.category))
+					categories[info.config.category].push(info);
+				else {
+					categories[info.config.category] = [];
+					categories[info.config.category].push(info);
+				}
+			}
             let text = `
 ╭─「(づ￣ 3￣)づ」
 │⋊ ᴜꜱᴇʀ: *${M.sender.username}*
