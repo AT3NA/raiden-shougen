@@ -11,23 +11,41 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'megumin',
-            description: `Will send you random megumin img.`,
+            description: `only made this command for Megumin simp`,
             aliases: ['megumin'],
             category: 'weeb',
             usage: `${client.config.prefix}megumin`,
-            baseXp: 50
+            baseXp: 25
         })
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        // fetch result of https://ichikaa.xyz/api/randomimage/megumin?apikey=Kuxw2RRu from the API using axios
-        return void M.reply( await request.buffer(`https://ichikaa.xyz/api/randomimage/megumin?apikey=Kuxw2RRu`),
-        MessageType.image,
+        // fetch result of https://api.waifu.pics/sfw/megumin from the API using axios
+        const { data } = await axios.get('https://api.waifu.pics/sfw/megumin')
+        const buffer = await request.buffer(data.url).catch((e) => {
+            return void M.reply(e.message)
+        })
+        while (true) {
+            try {
+                M.reply(
+                    buffer || 'Could not fetch image. Please try again later',
+                    MessageType.image,
                     undefined,
                     undefined,
-                    `🌟 Here you go.\n`,
+                    `*Simp proved ✌️*\n`,
                     undefined
-                ).catch((reason: any) =>
-            M.reply(`✖ An error occurred. Please try again later.`))
+                ).catch((e) => {
+                    console.log(`This Error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
+                    // console.log('Failed')
+                    M.reply(`Could not fetch image. Here's the URL: ${data.url}`)
+                })
+                break
+            } catch (e) {
+                // console.log('Failed2')
+                M.reply(`Could not fetch image. Here's the URL : ${data.url}`)
+                console.log(`This Error occurs when an image is sent via M.reply()\n Parent Catch Block : \n${e}`)
+            }
+        }
+        return void null
     }
 }
