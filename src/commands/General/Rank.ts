@@ -115,7 +115,7 @@ export default class Command extends BaseCommand {
 			.setOverlay("#FFFFFF")
 			.setUsername(username)
 			.setDiscriminator("0007")
-			.setBackground("COLOR", "#FFC0CB");
+			.setBackground("COLOR", "#000000");
 		rank.build({}).then((rankcard) => {
 			const text = `🏮 *Username: ${username}*\n\n〽️ *Level: ${level}*\n\n⭐ *Exp: ${
 				exp || 0
