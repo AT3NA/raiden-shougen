@@ -24,7 +24,7 @@ export default class Command extends BaseCommand {
          return void M.reply(
         `Don't be a pervert, Baka! This is not an NSFW group.`
          );
-        // fetch result of https://velgrynd.herokuapp.com/api/randomimage?q=bdsm&apikey=Kuxw2RRu from the API using axios
+        // fetch result of https://velgrynd.herokuapp.com/api/randomimage?q=bdsm&apikey=jxhcCGrCtIavLMAe6JY8xrwTX from the API using axios
         return void M.reply( await request.buffer(`https://velgrynd.herokuapp.com/api/randomimage?q=bdsm&apikey=jxhcCGrCtIavLMAe6JY8xrwTX`),
         MessageType.image,
                     undefined,
