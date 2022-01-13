@@ -1,4 +1,3 @@
-@@ -0,0 +1,53 @@
 import { MessageType } from '@adiwajshing/baileys'
 import request from '../../lib/request'
 import MessageHandler from '../../Handlers/MessageHandler'
@@ -11,20 +10,20 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'amazon',
-            description: `Give you your amazon search result `,
-            aliases: ['az'],
+            aliases: ['az', 'am'],
+            description: 'Searches the given items from Amazon. ',
             category: 'utils',
-            usage: `${client.config.prefix}amazon`,
-            baseXp: 50
+
+            usage: `${client.config.prefix}amazon [title]`
         })
     }
-
-     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
+    // static count = 0
+    run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
 
         if (!joined) return void M.reply('✖ Provide an item name to search, Baka!')
         const chitoge = joined.trim()
         console.log(chitoge)
-        const { data } = await axios.get(`https://leyscoders-api.herokuapp.com/api/amazon-search?q=${chitoge}&apikey=dappakntlll`)
+        const { data } = await axios.get(`https://leyscoders-api.herokuapp.com/api/amazon-search?q=${chitoge}&apikey=dappakntlll`)//api MIMINGANZ
         const buffer = await request.buffer(data.result.thumb).catch((e) => {
             return void M.reply(e.message)
         })
