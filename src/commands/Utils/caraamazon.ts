@@ -23,8 +23,8 @@ export default class Command extends BaseCommand {
 
         if (!joined) return void M.reply('✖ Provide an item name to search, Baka!')
         const chitoge = joined.trim()
-        console.log(yotsuba)
-        const { data } = await axios.get('https://leyscoders-api.herokuapp.com/api/amazon-search?q=${yotsuba}&apikey=dappakntlll')
+        console.log(chitoge)
+        const { data } = await axios.get('https://leyscoders-api.herokuapp.com/api/amazon-search?q=${chitoge}&apikey=dappakntlll')
         const buffer = await request.buffer(data.result.thumb).catch((e) => {
             return void M.reply(e.message)
         })
