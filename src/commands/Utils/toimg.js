@@ -1,7 +1,7 @@
 #carbon 
 
 const { spawn } = require('child_process')
-const util = require('util')
+const util = require('utils')
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async (m, { conn }) => {
