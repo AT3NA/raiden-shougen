@@ -12,9 +12,9 @@ export default class Command extends BaseCommand {
             command: 'ppcouple',
             description: `sends you matching pfp.`,
             aliases: ['matchpfp','micon'],
-            category: 'moderation',
+            category: 'fun',
             usage: `${client.config.prefix}micon`,
-            baseXp: 50
+            baseXp: 10
         })
     }
 
