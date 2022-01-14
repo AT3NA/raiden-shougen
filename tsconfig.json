@@ -2,7 +2,7 @@
   "compilerOptions": {            
     "target": "ES6",                                
     "module": "commonjs",
-    "allowjs": true,                      
+    "allowJs": true,                      
     "lib": [
       "ESNext"
     ],                                   
