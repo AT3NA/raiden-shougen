@@ -21,8 +21,8 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         // fetch result of https://waifu.pics/api/sfw/waifu from the API using axios
-        const { data } = await axios.get('https://api-xcoders.xyz/api/anime/randomnhentai?apikey=MawfYEaFuf')
-        const buffer = await request.buffer(data.result.thumbnail).catch((e) => {
+        const { data } = await axios.get('https://api.ichikaa.xyz/api/nhrandom?apikey=jxhcCGrCtIavLMAe6JY8xrwTX')
+        const buffer = await request.buffer(data.result.cover).catch((e) => {
             return void M.reply(e.message)
         })
         while (true) {
