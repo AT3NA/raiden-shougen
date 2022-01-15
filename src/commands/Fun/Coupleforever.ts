@@ -20,8 +20,8 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         const { data } = await axios.get('https://api.ichikaa.xyz/api/ppcouple?apikey=jxhcCGrCtIavLMAe6JY8xrwTX')
-        const male = await request.buffer(data.male);
-        const female = await request.buffer(data.female);
+        const male = await request.buffer(data.result.male);
+        const female = await request.buffer(data.result.female);
 
         while (true) {
             try {
@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
                 ).catch((e) => {
                     console.log(`This Error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
                     // console.log('Failed')
-                    M.reply(`Could not fetch image. Here's the URL: ${data.male}`)
+                    M.reply(`Could not fetch image. Here's the URL: ${data.result.male}`)
                 })
                 M.reply(
                     female || 'Could not fetch image. Please try again later',
@@ -47,7 +47,7 @@ export default class Command extends BaseCommand {
                 ).catch((e) => {
                     console.log(`This Error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
                     // console.log('Failed')
-                    M.reply(`Could not fetch image. Here's the URL: ${data.female}`)
+                    M.reply(`Could not fetch image. Here's the URL: ${data.result.female}`)
                 })
                 break
             } catch (e) {
