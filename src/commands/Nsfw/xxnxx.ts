@@ -18,7 +18,7 @@ export default class Command extends BaseCommand {
         })
     }
     // static count = 0
-     run = async (M: ISimplifiedMessage): Promise<void> => {
+     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
          if (!(await this.client.getGroupData(M.from)).nsfw)
          return void M.reply(
         `Don't be a pervert, Baka! This is not an NSFW group.`
