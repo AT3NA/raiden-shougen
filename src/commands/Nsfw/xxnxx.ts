@@ -18,8 +18,11 @@ export default class Command extends BaseCommand {
         })
     }
     // static count = 0
-    run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
-        
+     run = async (M: ISimplifiedMessage): Promise<void> => {
+         if (!(await this.client.getGroupData(M.from)).nsfw)
+         return void M.reply(
+        `Don't be a pervert, Baka! This is not an NSFW group.`
+         );       
         if (!joined) return void M.reply('Provide the keywords you wanna search, Baka!')
         const chitoge = joined.trim()
         console.log(chitoge)
