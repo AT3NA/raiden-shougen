@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
             aliases: ['ig'],
             description: 'Download video from Instagram ',
             category: 'media',
-            dm: true,
+            dm: false,
             usage: `${client.config.prefix}ig [name]`
         })
     }
