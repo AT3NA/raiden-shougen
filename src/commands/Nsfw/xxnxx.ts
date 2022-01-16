@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
             aliases: ['xxx'],
             description: 'Download video from XNXX ',
             category: 'nsfw',
-            dm: true,
+            dm: false,
             usage: `${client.config.prefix}xnxx [name]`
         })
     }
