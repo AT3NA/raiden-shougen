@@ -48,6 +48,7 @@ export default class Command extends BaseCommand {
 │⋊ ɴᴀᴍᴇ: Yᴏᴛsᴜʙᴀ
 │⋊ ᴘʀᴇꜰɪx: ${this.client.config.prefix}
 │⋊ ᴏᴡɴᴇʀ: *${this.client.config.prefix}mod*
+|⋊ 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖦𝗋𝗈𝗎𝗉: https://chat.whatsapp.com/KTkxQtwZuBq9McQKsh5iSj
 ╰────────────┈平和                            \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
@@ -62,7 +63,7 @@ export default class Command extends BaseCommand {
  ──❅┈[ 𝒀𝒐𝒕𝒔𝒖𝒃𝒂 𝑩𝒐𝒕 ]┈❅───
 ┌────────────┈❅
 │   🧨 YᴏᴛsUʙᴀ
-│   ©️ IᑎᖴIᑎITY ᘜᖇOᑌᑭ
+│   ©️ ՏYᑎTᕼᗴՏIᘔᗴᗪ IᑎᖴIᑎITY
 └────────────┈⁂
 ❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
 🎗 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*` }
