@@ -44,11 +44,11 @@ export default class Command extends BaseCommand {
 			}
             let text = `
 ╭─「(づ￣ 3￣)づ」
-│⋊ ᴜꜱᴇʀ: *${M.sender.username}*
-│⋊ ɴᴀᴍᴇ: Yᴏᴛsᴜʙᴀ
-│⋊ ᴘʀᴇꜰɪx: ${this.client.config.prefix}
-│⋊ ᴏᴡɴᴇʀ: *${this.client.config.prefix}mod*
-|⋊ 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖦𝗋𝗈𝗎𝗉: https://chat.whatsapp.com/KTkxQtwZuBq9McQKsh5iSj
+│⋊ 𝕌𝕤𝕖𝕣: *${M.sender.username}*
+│⋊ ℕ𝕒𝕞𝕖: Yᴏᴛsᴜʙᴀ
+│⋊ ℙ𝕣𝕖𝕗𝕚𝕩: ${this.client.config.prefix}
+│⋊ 𝕆𝕨𝕟𝕖𝕣: *${this.client.config.prefix}mod*
+│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/KTkxQtwZuBq9McQKsh5iSj
 ╰────────────┈平和                            \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
