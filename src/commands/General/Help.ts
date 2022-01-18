@@ -52,9 +52,9 @@ export default class Command extends BaseCommand {
 ╰────────────┈平和                            \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
-                text += `*━━━❰ ${this.client.util.capitalize(
+                text += `*『 ${this.client.util.capitalize(
 					key
-	         )} ❱━━━*\n❐ \`\`\`${categories[key]
+	         )} 』*\n❐ \`\`\`${categories[key]
                     .map((command) => command.config?.command)
                     .join(', ')}\`\`\`\n\n`
             return void this.client.sendMessage(M.from, { url: chitoge }, MessageType.video, {quoted:M.WAMessage,
