@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
         if (!joined) return void M.reply('Give me a website link baka')
         const chitoge = joined.trim()
         await axios.get(`https://api-xcoders.xyz/api/tools/tinyurl?url=${chitoge}&apikey=MawfYEaFuf`)
-        .then((data) => {
+        .then { data } => {
                 // console.log(response);
                 const text = `🌐 *Your url* :${data.result}`
                 M.reply(text);
