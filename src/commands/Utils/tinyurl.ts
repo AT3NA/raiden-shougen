@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
         await axios.get(`https://api-xcoders.xyz/api/tools/tinyurl?url=${chitoge}&apikey=MawfYEaFuf`)
         .then((response) => {
                 // console.log(response);
-                const text = `🌐 *Your url* :${response.data.result}`
+                const text = `🌐 *Your url* :${data.result}`
                 M.reply(text);
             }).catch(err => {
                 M.reply(`Sorry something went wrong.`)
