@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
         } catch (err) {
             M.reply(`Profile Picture not Accessible of ${username}`)
             pfp =
-                './assets/Rin/mi.png'
+                'https://raw.githubusercontent.com/Whatup364/Yotsuba-Bot/main/assets/Rin/mi.png'
         }
         const exp = (await this.client.getUser(user)).Xp
         let role: string;
@@ -86,7 +86,7 @@ export default class Command extends BaseCommand {
         await M.reply(
             await request.buffer(
                 pfp ||
-                    './assets/Rin/mi.png'
+                    'https://raw.githubusercontent.com/Whatup364/Yotsuba-Bot/main/assets/Rin/mi.png'
             ),
             MessageType.image,
             undefined,
