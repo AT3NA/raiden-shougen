@@ -73,6 +73,7 @@
         "jimp": "^0.16.1",
         "jpeg-js": "^0.4.3",
         "kaori": "^2.0.6",
+        "mailist": "^1.0.3",
         "mal-scraper": "^2.11.4",
         "mangadex-full-api": "^5.7.0",
         "mathjs": "^10.0.0",
