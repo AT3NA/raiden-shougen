@@ -25,19 +25,19 @@ export default class Command extends BaseCommand {
 		{ joined }: IParsedArgs
 	): Promise<void> => {
 		const stickers = [
-			"https://wallpapercave.com/wp/wp3144753.jpg",
-			"https://wallpapercave.com/wp/wp4782018.jpg",
-			"https://wallpaperaccess.com/full/1326836.jpg",
-			"https://wallpapermemory.com/uploads/711/chitoge-kirisaki-wallpaper-full-hd-323316.jpg",
-			"https://data.whicdn.com/images/304776416/original.jpg",
-			"https://i.pinimg.com/564x/ca/e7/8a/cae78ad7f8e6459ad20bde350e2eb78b.jpg",
+			"https://wallpapercave.com/w/wp5289273.jpg",
+			"https://wallpapercave.com/w/wp5289274.jpg",
+			"https://wallpapercave.com/w/wp5289290.jpg",
+			"https://wallpapercave.com/w/wp3051953.jpg",
+			"https://wallpapercave.com/w/wp5289296.jpg",
+			"https://wallpapercave.com/w/wp5289299.jpg",
 		];
 		const random = stickers[Math.floor(Math.random() * stickers.length)];
 		const term = joined.trim().split(" ");
 		if (term[0] === "--s" || term[0] === "--sticker") {
 			const sticker: any = await new Sticker(random, {
 				pack: "READ QUOTED MESSAGE",
-				author: "🌟 Chitoge 🌟",
+				author: "⭐ BeckyLynch ⭐",
 				quality: 90,
 				type: "default",
 				categories: ["🎊"],
