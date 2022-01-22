@@ -32,7 +32,7 @@ export default class Command extends BaseCommand {
 			return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 		};
 		const users = this.client.DB.user.count()
-const uptime = () => formatTime(process.uptime());
+                const uptime = () => formatTime(process.uptime());
 		await M.reply(
 			`*━━━❰ 💙 BECKY ❤️ ❱━━━*\n\n🔮 *Groups: ${
 				chats.length
