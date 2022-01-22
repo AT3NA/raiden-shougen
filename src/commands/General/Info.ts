@@ -31,7 +31,7 @@ export default class Command extends BaseCommand {
 			const secs = Math.floor(seconds % 60);
 			return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 		};
-		const dp = this.client.DB.user.count();
+		const users = this.client.DB.user.count();
                 const uptime = () => formatTime(process.uptime());
 		await M.reply(
 			`*━━━❰ 💙 BECKY ❤️ ❱━━━*\n\n🔮 *Groups: ${
