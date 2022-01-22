@@ -29,7 +29,7 @@ export default class Command extends BaseCommand {
                     categories[info.config.category].push(info)
                 }
             }
-            let text = `🍃 Becky\'s Command List 🍃\n--> Official group:-  http://gg.gg/LucySupportGroup-Becky\n\n💡 *Prefix:* " */* "\n\n`
+            let text = `🍃 Becky\'s Command List 🍃\n--> Official group:-  http://gg.gg/LucySupportGroup-Becky\n\n💡 *Prefix:* " *#* "\n\n`
             const keys = Object.keys(categories).sort((a, b) => a.localeCompare(b))
             for (const key of keys)
                 text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}*\n❐ \`\`\`${categories[
@@ -38,7 +38,7 @@ export default class Command extends BaseCommand {
                     .map((command) => command.config?.command)
                     .join(', ')}\`\`\`\n\n`
             return void M.reply(
-                `${text} 📚 Use ${this.client.config.prefix}help <command_name> to view the full info.\n\n🔖 Eg:/help waifu`
+                `${text} 📚 Use ${this.client.config.prefix}help <command_name> to view the full info.\n\n🔖 Eg:#help waifu`
             )
         }
         const key = parsedArgs.joined.toLowerCase()
