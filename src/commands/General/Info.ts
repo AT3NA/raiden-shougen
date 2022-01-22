@@ -31,12 +31,12 @@ export default class Command extends BaseCommand {
 			const secs = Math.floor(seconds % 60);
 			return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 		};
-		const user = this.client.DB.user.count();
+		const dp = this.client.DB.user.count();
                 const uptime = () => formatTime(process.uptime());
 		await M.reply(
 			`*━━━❰ 💙 BECKY ❤️ ❱━━━*\n\n🔮 *Groups: ${
 				chats.length
-			}*\n\n🚦 *Uptime: ${uptime()}*\n\n 🧧 *Users: ${user.count()}*`
+			}*\n\n🚦 *Uptime: ${uptime()}*\n\n 🧧 *Users: ${db.count()}*`
 		);
 	};
 }
