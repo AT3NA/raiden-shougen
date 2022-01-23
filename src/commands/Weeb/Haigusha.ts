@@ -26,7 +26,7 @@ let a = await marika.getRandomCharacter();
 let f = a.name.toLowerCase(); 
 		//const chitoge = joined.trim();
 		const client = new Character();
-		const chara = await client.character(f).catch((err: any) => {
+		const chitoge = await client.character(f).catch((err: any) => {
 			return void M.reply(`Error, Try again later`)
 		});
 		//if (!chara)
