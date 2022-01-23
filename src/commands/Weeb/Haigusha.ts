@@ -32,13 +32,13 @@ let f = a.name.toLowerCase();
 		//if (!chara)
 			//return void (await M.reply(`Couldn't find any matching character.`));
 		let text = "";
-		text += `💙 *Name: ${chara.data.characters.results[0].name.full}*\n`;
-		text += `💛 *Source: ${chara.data.characters.results[0].media.edges[0].node.title.userPreferred}*\n\n`;
-		text += `🌐 *URL: ${chara.data.characters.results[0].siteUrl}*\n\n`;
-		text += `❤ *Description:* ${chara.data.characters.results[0].description}\n`;
+		text += `💙 *Name: ${chitoge.data.characters.results[0].name.full}*\n`;
+		text += `💛 *Source: ${chitoge.data.characters.results[0].media.edges[0].node.title.userPreferred}*\n\n`;
+		text += `🌐 *URL: ${chitoge.data.characters.results[0].siteUrl}*\n\n`;
+		text += `❤ *Description:* ${chitoge.data.characters.results[0].description}\n`;
 
 		const buffer = await request
-			.buffer(chara.data.characters.results[0].image.large)
+			.buffer(chitoge.data.characters.results[0].image.large)
 			.catch((e) => {
 				return void M.reply(e.message);
 			});
