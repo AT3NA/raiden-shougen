@@ -2,7 +2,7 @@ import { MessageType, WAParticipantAction } from '@adiwajshing/baileys'
 import chalk from "chalk";
 //import { evaluate } from "mathjs";
 import WAClient from "../lib/WAClient";
-import Canvas from "discord-welcome-card";
+import Canvacord from "canvacord";
 import ordinal from "ordinal";
 export default class EventHandler {
 	constructor(public client: WAClient) {}
