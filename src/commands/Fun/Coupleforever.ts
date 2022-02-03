@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        const { data } = await axios.get('https://api.ichikaa.xyz/api/ppcouple?apikey=jxhcCGrCtIavLMAe6JY8xrwTX')
+        const { data } = await axios.get('https://leyscoders-api.herokuapp.com/api/ppcouple?apikey=dappakntlll')
         const male = await request.buffer(data.result.male);
         const female = await request.buffer(data.result.female);
 
