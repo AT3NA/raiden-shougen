@@ -97,7 +97,7 @@ export default class MessageHandler {
                              undefined,
 				`No such command, Baka! Have you never seen someone use the command *${this.client.config.prefix}help*.`,
 			     undefined
-			)
+			);
 		const user = await this.client.getUser(M.sender.jid);
 		if (user.ban) return void M.reply("You're Banned from using commands.");
 		const state = await this.client.DB.disabledcommands.findOne({
