@@ -95,7 +95,7 @@ M.reply( await request.buffer(`https://www.linkpicture.com/q/IMG-20220118-WA0387
         MessageType.image,
                     undefined,
                     undefined,
-                    `404 Error can not find the anime *${chitoge}*`,
+                    `404 Error can not find the anime`,
                     undefined
                 );
 		const user = await this.client.getUser(M.sender.jid);
