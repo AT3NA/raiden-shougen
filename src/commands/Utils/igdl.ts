@@ -9,12 +9,12 @@ import axios from 'axios'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'ig',
-            aliases: ['ig'],
-            description: 'Download video from Instagram ',
+            command: 'igdl',
+            aliases: ['igdl', 'igpr'],
+            description: 'Download the post/video from ig ',
             category: 'media',
-            dm: false,
-            usage: `${client.config.prefix}ig [name]`
+            dm: true,
+            usage: `${client.config.prefix}igdl [link]`
         })
     }
     // static count = 0
@@ -23,32 +23,35 @@ export default class Command extends BaseCommand {
         if (!joined) return void M.reply('Provide the keywords you wanna search, Baka!')
         const chitoge = joined.trim()
         console.log(chitoge)
-        const { data } = await axios.get(`https://api.zekais.com/igdl2?url=${chitoge}&apikey=YMiIh5TF`)
-        if ((data as { error: string }).error) return void (await M.reply('Sorry, couldn\'t find'))
-        const buffer = await request.buffer(data.result[0].url).catch((e) => {
-            return void M.reply(e.message)
-        })
-        while (true) {
-            try {
-                M.reply(
-                    buffer || '🌟 An error occurred. Please try again later',
-                    MessageType.video,
+        const { data } = await axios.get(`https://hanzz-web.herokuapp.com/api/igdl?url=${chitoge}`)
+        if (data.result.error) return void M.reply( await request.buffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIJBLGeoanLhbUyzTNXLXXRPUDjUuDKIS8g&usqp=CAU`),
+        MessageType.image,
                     undefined,
                     undefined,
-                    `💐 *Result: ${chitoge} has been found*\n`,
+                    `*Sorry, couldn\'t find or some errors occurred*`,
                     undefined
-                ).catch((e) => {
-                    console.log(`This error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
-                    // console.log('Failed')
-                    M.reply(`🌟An error occurred. Please try again later.`)
-                })
-                break
-            } catch (e) {
-                // console.log('Failed2')
-                M.reply(`An error occurred. Please try again later.`)
-                console.log(`This error occurs when an image is sent via M.reply()\n Parent Catch Block : \n${e}`)
-            }
-        }
-        return void null
+                )
+switch (data.result.medias[0].type) {
+  case 'image':
+    M.reply( await request.buffer(data.result.medias[0].url),
+        MessageType.image,
+                    undefined,
+                    undefined,
+                    `Here you go`,
+                    undefined
+                )
+    break
+  case 'video':
+    M.reply( await request.buffer(data.result.medias[0].url),
+       MessageType.video,
+                    undefined,
+                    undefined,
+                    `Here you go`,
+                    undefined
+                )
+    break
+  default:
+    M.reply("Invalid format")
+}
     }
 }
