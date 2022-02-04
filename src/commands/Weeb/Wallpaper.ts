@@ -46,7 +46,7 @@ export default class Command extends BaseCommand {
                     undefined,
                     `*Sorry, couldn\'t find or some errors occurred*`,
                     undefined
-                  )),
+                  ));),
 		for (let i = 0; i < amount; i++) {
 			const res = `*🌟 Here you go.*`;
 			this.client.sendMessage(
