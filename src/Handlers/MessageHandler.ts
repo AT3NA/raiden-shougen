@@ -90,14 +90,10 @@ export default class MessageHandler {
 				groupMetadata?.subject || "DM"
 			)}`
 		);
-		if (!command)
-			return void M.reply( await request.buffer(`https://www.linkpicture.com/q/IMG-20220118-WA0387.png`),
-			     MessageType.image,
-	                     undefined,
-                             undefined,
-				`No such command, Baka! Have you never seen someone use the command *${this.client.config.prefix}help*.`,
-			     undefined
-			);
+			if (!command)
+				return void M.reply(
+					`No such command, Baka! Have you never seen someone use the command *${this.client.config.prefix}help*.`
+				);
 		const user = await this.client.getUser(M.sender.jid);
 		if (user.ban) return void M.reply("You're Banned from using commands.");
 		const state = await this.client.DB.disabledcommands.findOne({
