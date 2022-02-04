@@ -40,9 +40,14 @@ export default class Command extends BaseCommand {
 		const wall = new AnimeWallpaper();
 		const wallpaper = await wall.getAnimeWall2(term).catch(() => null);
 		if (!wallpaper)
-			return void (await M.reply(
-				`Couldn't find any matching term of wallpaper.`
-			));
+	 return voidreturn void M.reply( await request.buffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIJBLGeoanLhbUyzTNXLXXRPUDjUuDKIS8g&usqp=CAU`),
+              MessageType.image,
+                    undefined,
+                    undefined,
+                    `*Sorry, couldn\'t find or some errors occurred*`,
+                    undefined
+                    )
+		      ));
 		for (let i = 0; i < amount; i++) {
 			const res = `*🌟 Here you go.*`;
 			this.client.sendMessage(
