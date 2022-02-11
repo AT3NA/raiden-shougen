@@ -1,5 +1,6 @@
-/** @format */
+//** @format */
 
+import { MessageType, Mimetype } from "@adiwajshing/baileys/lib/WAConnection";
 import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
 import WAClient from "../../lib/WAClient";
@@ -32,10 +33,21 @@ export default class Command extends BaseCommand {
 			return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 		};
 		const uptime = () => formatTime(process.uptime());
-		await M.reply(
-			`*━━━❰ 🅨︎🅞︎🅣︎🅢︎🅤︎🅑︎🅐︎ ❱━━━*\n\n🔮 *Groups: ${
-				chats.length
-			}*\n\n🚦 *Uptime: ${uptime()}*`
-		);
-	};
+		this.run = async (M: ISimplifiedMessage): Promise<void> => {
+			const chitoge =
+				"https://c.tenor.com/veo9RwLpw8AAAAPo/nakano-yotsuba-wolverine.mp4";
+			return void this.client.sendMessage(
+				M.from,
+				{ url: chitoge },
+				MessageType.video,
+				{
+					quoted: M.WAMessage,
+					mimetype: Mimetype.gif,
+					caption: `*━━━❰ 🅨︎🅞︎🅣︎🅢︎🅤︎🅑︎🅐︎ ❱━━━*\n\n🔮 *Groups: ${
+						chats.length
+					}*\n\n🚦 *Uptime: ${uptime()}*`,
+				}
+			);
+		};
+	}
 }
