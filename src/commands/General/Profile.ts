@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
         } catch (err) {
             M.reply(`Profile Picture not Accessible of ${username}`)
             pfp =
-                'https://raw.githubusercontent.com/Whatup364/Yotsuba-Bot/main/assets/Rin/mi.png'
+                'https://lh3.googleusercontent.com/pw/AM-JKLXB6CJ-f5om8Ez-KdZrAKJAngXxqUEx3qSdxaDc0A_vBG5Hu3nalgdkm7pPwd7nB3Lbjl_F5OWWoD0wnHbz-x_9prqibksy6jdNS_YeBzeYl4wwjxv6ctumOPFUR-htH0uihHehXEGw0eBC9t_o6a9r=w698-h986-no?authuser=0'
         }
         const exp = (await this.client.getUser(user)).Xp
         let role: string;
