@@ -86,7 +86,7 @@ export default class Command extends BaseCommand {
         await M.reply(
             await request.buffer(
                 pfp ||
-                    'https://raw.githubusercontent.com/Whatup364/Yotsuba-Bot/main/assets/Rin/mi.png'
+                    'https://cdn.donmai.us/original/04/b8/04b83e229baed4a8e83787d75b28a614.jpg'
             ),
             MessageType.image,
             undefined,
