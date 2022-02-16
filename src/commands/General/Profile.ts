@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
         } catch (err) {
             M.reply(`Profile Picture not Accessible of ${username}`)
             pfp =
-                'https://lh3.googleusercontent.com/pw/AM-JKLXB6CJ-f5om8Ez-KdZrAKJAngXxqUEx3qSdxaDc0A_vBG5Hu3nalgdkm7pPwd7nB3Lbjl_F5OWWoD0wnHbz-x_9prqibksy6jdNS_YeBzeYl4wwjxv6ctumOPFUR-htH0uihHehXEGw0eBC9t_o6a9r=w698-h986-no?authuser=0'
+                'https://cdn.donmai.us/original/04/b8/04b83e229baed4a8e83787d75b28a614.jpg'
         }
         const exp = (await this.client.getUser(user)).Xp
         let role: string;
