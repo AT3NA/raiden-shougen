@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
         await axios.get(`https://leyscoders-api.herokuapp.com/api/tinyurl?url=${chitoge}&apikey=dappakntlll`)
         .then((response) => {
                 // console.log(response);
-                const text = `🌐 *Your url* :${response.result}`
+                const text = `🌐 *Your url* :${response.data.result}`
                 M.reply(text);
             }).catch(err => {
                 M.reply(`Sorry something went wrong.`)
