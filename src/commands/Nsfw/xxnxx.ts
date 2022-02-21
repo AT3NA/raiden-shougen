@@ -23,10 +23,10 @@ export default class Command extends BaseCommand {
          return void M.reply(
         `Don't be a pervert, Baka! This is not an NSFW group.`
          );       
-        if (!joined) return void M.reply('Provide the keywords you wanna search, Baka!')
+        if (!joined) return void M.reply('Give me url of xnxx baka')
         const chitoge = joined.trim()
         console.log(chitoge)
-        const { data } = await axios.get(`https://api.ichikaa.xyz/api/xnxxdl?url=${chitoge}&apikey=jxhcCGrCtIavLMAe6JY8xrwTX`)
+        const { data } = await axios.get(`https://api-xcoders.xyz/api/download/xnxx?url=${chitoge}&apikey=MawfYEaFuf`)
         if ((data as { error: string }).error) return void (await M.reply('Sorry, couldn\'t find'))
         const buffer = await request.buffer(data.result.url).catch((e) => {
             return void M.reply(e.message)
