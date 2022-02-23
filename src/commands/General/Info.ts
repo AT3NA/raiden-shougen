@@ -32,6 +32,7 @@ export default class Command extends BaseCommand {
 			const secs = Math.floor(seconds % 60);
 			return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 		};
+                const users = this.client.DB.user.count();
 		const uptime = () => formatTime(process.uptime());
 		this.run = async (M: ISimplifiedMessage): Promise<void> => {
 			const chitoge =
