@@ -21,7 +21,7 @@ export default class WAClient extends Base {
 	assets = new Map<string, Buffer>();
 	constructor(public config: IConfig) {
 		super();
-		this.browserDescription[0] = "Chitoge";
+		this.browserDescription[0] = "Yotsuba based on Chitoge";
 		this.version = [3, 3234, 9];
 		this.logger.level = "fatal";
 
