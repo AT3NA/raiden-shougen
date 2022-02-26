@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
     }
     // static count = 0
      run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {    
-        if (!joined) return void M.reply('Give me url of xnxx baka')
+        if (!joined) return void M.reply('Give me url of tiktok baka')
         const chitoge = joined.trim()
         console.log(chitoge)
         const { data } = await axios.get(`https://ravindumanoj-sew-api.herokuapp.com/main/download/tiktok?url=${chitoge}&apikey=RavinduManoj`)
@@ -34,7 +34,7 @@ export default class Command extends BaseCommand {
                     MessageType.video,
                     undefined,
                     undefined,
-                    `💐 *Result: ${data.result.wm} has been found*\n`,
+                    `💐 *Result: ${chitoge} has been found*\n`,
                     undefined
                 ).catch((e) => {
                     console.log(`This error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
