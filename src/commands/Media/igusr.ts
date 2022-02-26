@@ -10,7 +10,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'iguser',
-            aliases: ['ur', 'ig'],
+            aliases: ['ig'],
             description: 'Get the info of a user from ig ',
             category: 'media',
             dm: true,
