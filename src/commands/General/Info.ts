@@ -1,5 +1,7 @@
 //** @format */
 
+//** @format */
+
 import { MessageType, Mimetype } from "@adiwajshing/baileys/lib/WAConnection";
 import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
@@ -19,7 +21,7 @@ export default class Command extends BaseCommand {
 
 	run = async (M: typings.ISimplifiedMessage): Promise<void> => {
 		/*eslint-disable @typescript-eslint/no-explicit-any*/
-		const chats: any = this.client.chats
+        const chats: any = this.client.chats		
 			.all()
 			.filter((v) => !v.read_only && !v.archive)
 			.map((v) => v.jid)
@@ -38,10 +40,12 @@ export default class Command extends BaseCommand {
 		.map((v) => v.jid)
 		.map((jids) => (jids.includes("@s.whatsapp.net") ? jids : name))
 		.filter((v) => v);
-		const uptime = () => formatTime(process.uptime());
+		function uptime() {
+			return newFunction(formatTime);
+		}
 		this.run = async (M: typings.ISimplifiedMessage): Promise<void> => {
 			const chitoge =
-				"https://c.tenor.com/veo9RwLpw8AAAAPo/nakano-yotsuba-wolverine.mp4";
+				"/assets/a.mp4";
 			return void this.client.sendMessage(
 				M.from,
 				{ url: chitoge },
@@ -50,10 +54,14 @@ export default class Command extends BaseCommand {
 					quoted: M.WAMessage,
 					mimetype: Mimetype.gif,
 					caption: `*━━━❰ 🅨︎🅞︎🅣︎🅢︎🅤︎🅑︎🅐︎ ❱━━━*\n\n🔮 *Groups: ${
-						chats.length
+				chats.length
 					}*\n\n🚦 *Uptime: ${uptime()}*\n\n🦆 *My cute people: ${this.client.chats.all().filter(chat => chat.jid.endsWith('@s.whatsapp.net')).length}*\n\n`,
 				}
 			);
 		};
 	}
+}
+
+function newFunction(formatTime: (seconds: any) => string) {
+	return formatTime(process.uptime());
 }
