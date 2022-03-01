@@ -4,7 +4,7 @@ import { MessageType, Mimetype } from "@adiwajshing/baileys/lib/WAConnection";
 import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
 import WAClient from "../../lib/WAClient";
-import { ISimplifiedMessage } from "../../typings";
+import * as typings from "../../typings";
 
 export default class Command extends BaseCommand {
 	constructor(client: WAClient, handler: MessageHandler) {
@@ -17,7 +17,7 @@ export default class Command extends BaseCommand {
 		});
 	}
 
-	run = async (M: ISimplifiedMessage): Promise<void> => {
+	run = async (M: typings.ISimplifiedMessage): Promise<void> => {
 		/*eslint-disable @typescript-eslint/no-explicit-any*/
 		const chats: any = this.client.chats
 			.all()
@@ -26,15 +26,20 @@ export default class Command extends BaseCommand {
 			.map((jids) => (jids.includes("g.us") ? jids : null))
 			.filter((v) => v);
 		const pad = (s: any) => (s < 10 ? "0" : "") + s;
-		const formatTime = (seconds: any) => {
+		function formatTime(seconds: any): string {
 			const hours = Math.floor(seconds / (60 * 60));
 			const minutes = Math.floor((seconds % (60 * 60)) / 60);
 			const secs = Math.floor(seconds % 60);
 			return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
-		};
-                const users = this.client.DB.user.count();
+		}
+		const users: any = this.client.chats
+		.all()
+		.filter((v) => !v.jid.endsWith && !v.archive)
+		.map((v) => v.jid)
+		.map((jids) => (jids.includes("@s.whatsapp.net") ? jids : name))
+		.filter((v) => v);
 		const uptime = () => formatTime(process.uptime());
-		this.run = async (M: ISimplifiedMessage): Promise<void> => {
+		this.run = async (M: typings.ISimplifiedMessage): Promise<void> => {
 			const chitoge =
 				"https://c.tenor.com/veo9RwLpw8AAAAPo/nakano-yotsuba-wolverine.mp4";
 			return void this.client.sendMessage(
@@ -46,7 +51,7 @@ export default class Command extends BaseCommand {
 					mimetype: Mimetype.gif,
 					caption: `*━━━❰ 🅨︎🅞︎🅣︎🅢︎🅤︎🅑︎🅐︎ ❱━━━*\n\n🔮 *Groups: ${
 						chats.length
-					}*\n\n🚦 *Uptime: ${uptime()}*\n\n🦆 *My cute people: ${users.count()}*`,
+					}*\n\n🚦 *Uptime: ${uptime()}*\n\n🦆 *My cute people: ${this.client.chats.all().filter(chat => chat.jid.endsWith('@s.whatsapp.net')).length}*\n\n`,
 				}
 			);
 		};
