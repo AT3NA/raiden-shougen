@@ -51,7 +51,7 @@ export default class Command extends BaseCommand {
 					mimetype: Mimetype.gif,
 					caption: `━━━❰ 🅨︎🅞︎🅣︎🅢︎🅤︎🅑︎🅐︎ ❱━━━\n\n🔮 *Groups: ${
 				chats.length
-					}\n\n🚦 *Uptime: ${uptime()}\n\n🦆 My cute people: ${users}\n\n\n*Ban Users: ${uban}*\n\n\n`,
+					}\n\n🚦 *Uptime: ${uptime()}*\n\n🦆 *My cute people: ${users}*\n\n\n💢 *Banned Users: ${uban}*\n\n\n`,
 				}
 			);
 		};
