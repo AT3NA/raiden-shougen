@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
 	}
 
 	run = async (M: typings.ISimplifiedMessage): Promise<void> => {
-		/*eslint-disable @typescript-eslint/no-explicit-any*/
+		//eslint-disable @typescript-eslint/no-explicit-any/
         const chats: any = this.client.chats		
 			.all()
 			.filter((v) => !v.read_only && !v.archive)
@@ -34,12 +34,8 @@ export default class Command extends BaseCommand {
 			const secs = Math.floor(seconds % 60);
 			return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 		}
-		const users: any = this.client.chats
-		.all()
-		.filter((v) => !v.jid.endsWith && !v.archive)
-		.map((v) => v.jid)
-		.map((jids) => (jids.includes("@s.whatsapp.net") ? jids : name))
-		.filter((v) => v);
+		const users = await this.client.DB.user.count();
+                const uban = await this.client.DB.user.count({ban: true});
 		function uptime() {
 			return newFunction(formatTime);
 		}
@@ -53,9 +49,9 @@ export default class Command extends BaseCommand {
 				{
 					quoted: M.WAMessage,
 					mimetype: Mimetype.gif,
-					caption: `*━━━❰ 🅨︎🅞︎🅣︎🅢︎🅤︎🅑︎🅐︎ ❱━━━*\n\n🔮 *Groups: ${
+					caption: `━━━❰ 🅨︎🅞︎🅣︎🅢︎🅤︎🅑︎🅐︎ ❱━━━\n\n🔮 *Groups: ${
 				chats.length
-					}*\n\n🚦 *Uptime: ${uptime()}*\n\n🦆 *My cute people: ${this.client.chats.all().filter(chat => chat.jid.endsWith('@s.whatsapp.net')).length}*\n\n`,
+					}\n\n🚦 *Uptime: ${uptime()}\n\n🦆 My cute people: ${users}\n\n\n*Ban Users: ${uban}*\n\n\n`,
 				}
 			);
 		};
