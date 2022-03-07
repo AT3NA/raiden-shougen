@@ -1,50 +1,52 @@
 import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
 import WAClient from "../../lib/WAClient";
-import { ISimplifiedMessage,IParsedArgs } from "../../typings";
-import axios from 'axios';
-import akaneko from "akaneko";
-import request from "../../lib/request";
-import { MessageType,Mimetype } from "@adiwajshing/baileys";
-// import { MessageType, Mimetype } from '@adiwajshing/baileys'
+import { IParsedArgs, ISimplifiedMessage } from "../../typings";
+import { MessageType, Mimetype } from "@adiwajshing/baileys";
+import { Doujin } from "@shineiichijo/nhentai-pdf";
+import { tmpdir } from "os";
+import { readFile } from "fs/promises";
+import nHentai from "shentai";
 
 export default class Command extends BaseCommand {
-	constructor(client: WAClient, handler: MessageHandler) {
-		super(client, handler, {
-			command: "ncode",
-			description: 'welcome to the darkness 🌚',
-			aliases: ["nhdl","nc"],
-			category: "nsfw",
-			usage: `${client.config.prefix}nc`,
-			baseXp: 50,
-		});
-	}
+  constructor(client: WAClient, handler: MessageHandler) {
+    super(client, handler, {
+      command: "ncode",
+      description: `welcome to the darkness 🌚`,
+      aliases: ["nhdl","nc"],
+      category: "nsfw",
+      usage: `${client.config.prefix}ncode [nhentai_id]`,
+      baseXp: 50,
+    });
+  }
 
-	run = async (M: ISimplifiedMessage,{joined}:IParsedArgs): Promise<void> => {
-		try {
-            if (!(await this.client.getGroupData(M.from)).nsfw)
-			return void M.reply(
-				`Don't be a pervert, Baka! This is not an NSFW group.`
-			);
-        const term = joined
-		if(!term) return void M.reply('provide a code')
-	    const {data} = await axios.get(`https://velgrynd.herokuapp.com/api/nhentai?code=${term}&apikey=jxhcCGrCtIavLMAe6JY8xrwTX`);
-		if(!data) return void M.reply(`couldn't find the doujin`)
-        const { native , pretty,default:string} = data.result.title;
-       console.log(data.result.thumbnails[0])
-	   const thumb:any = await request.buffer(data.result.thumbnails[0]);
-		const base64 = Buffer.from(thumb, 'binary').toString('base64')
-		M.reply(`🆔id : *${joined}*\n🌞title : *${pretty}*\n🎌language: *${data.result.language}*`);
-        axios.get(`https://ichikaa.xyz/api/nhentaipdf?code=${term}&apikey=jxhcCGrCtIavLMAe6JY8xrwTX`).then(
-            async(response)=>{ 
-            this.client.sendMessage(M.from,await request.buffer( response?.data.result?.url), MessageType.document, { mimetype: "application/pdf",thumbnail: base64 ,filename: response.data.result.filename,quoted:M.WAMessage })}
-        )
-
-		return void null;    
-        } catch (error) {
-			console.error(error)
-            M.reply('sorry something went wrong')
-        }
-		
-	};
+  run = async (
+    M: ISimplifiedMessage,
+    { joined }: IParsedArgs
+  ): Promise<void> => {
+    const sHentai = new nHentai();
+    const term: any = joined;
+    if (!term)
+      return void M.reply(
+        `Provide the id of the doujin. You can know the id by using ${this.client.config.prefix}nhentai-search [term]`
+      );
+    const doujin = new Doujin(`https://nhentai.net/g/${term}/`);
+    if (!doujin.validate()) return void M.reply("Invalid nhentai id");
+    const search = await sHentai.getDoujin(term);
+    const filename = `${tmpdir()}/${Math.random().toString(36)}.pdf`;
+    await doujin.pdf(filename);
+    const img: any = await this.client.getBuffer(search.pages[0]);
+    const file = await readFile(filename);
+    return void (await this.client.sendMessage(
+      M.from,
+      file,
+      MessageType.document,
+      {
+        mimetype: Mimetype.pdf,
+        quoted: M.WAMessage,
+        thumbnail: Buffer.from(img, "binary").toString("base64"),
+        filename: search.titles.english,
+      }
+    ));
+  };
 }
