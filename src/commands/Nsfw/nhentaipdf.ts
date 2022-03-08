@@ -28,7 +28,7 @@ export default class Command extends BaseCommand {
     const term: any = joined;
     if (!term)
       return void M.reply(
-        `Provide the id of the doujin. You can know the id by using ${this.client.config.prefix}nhentai-search [term]`
+        `provide a code`
       );
     const doujin = new Doujin(`https://nhentai.net/g/${term}/`);
     if (!doujin.validate()) return void M.reply("Invalid nhentai id");
