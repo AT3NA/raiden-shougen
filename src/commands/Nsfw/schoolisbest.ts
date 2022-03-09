@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
         // fetch result of https://waifu.pics/api/sfw/waifu from the API using axios
         const gen = new School()
         const i = await gen.nsfw.anime.school()
-        const buffer = await request.buffer(gen.url).catch((e) => {
+        const buffer = await request.buffer(i.url).catch((e) => {
             return void M.reply(e.message)
         })
         while (true) {
@@ -33,7 +33,7 @@ export default class Command extends BaseCommand {
                     MessageType.image,
                     undefined,
                     undefined,
-                    `*Yamero*\n`,
+                    `*Ya...*\n`,
                     undefined
                 ).catch((e) => {
                     console.log(`This Error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
