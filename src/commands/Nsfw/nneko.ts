@@ -11,7 +11,7 @@ export default class Command extends BaseCommand {
 		super(client, handler, {
 			command: "nsfwnekogif",
 			description: `Know it yourself.`,
-			aliases: ["nsfwnekogif,nnekogif"],
+			aliases: ["nnekogif"],
 			category: "nsfw",
 			usage: `${client.config.prefix}nnekogif`,
 			baseXp: 50,
