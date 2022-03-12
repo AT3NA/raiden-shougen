@@ -4,7 +4,7 @@ import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
 import WAClient from "../../lib/WAClient";
 import { ISimplifiedMessage } from "../../typings";
-import akaneko from "akaneko";
+import gen from "images-generator";
 import request from "../../lib/request";
 import { MessageType } from "@adiwajshing/baileys";
 // import { MessageType, Mimetype } from '@adiwajshing/baileys'
@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
 		// fetch result of https://nekos.life/api/v2/img/wallpaper from the API using axios
-		const wall = await akaneko.nsfw.zettaiRyouiki();
+		const wall = await gen.nsfw.anime.thighs()
 		if (!(await this.client.getGroupData(M.from)).nsfw)
 			return void M.reply(
 				`Don't be a pervert, Baka! This is not an NSFW group.`
