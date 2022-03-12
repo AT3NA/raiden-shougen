@@ -3963,6 +3963,11 @@ lodash@^4.17.19, lodash@^4.17.21:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
+lolis.life@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/lolis.life/-/lolis.life-4.0.0.tgz#cbe38e2e63daa656bcf2bccff31fbcc1faa7d1ed"
+  integrity sha512-OKahLGyU9lqY7YEq80BDzDCl16BKsc4LP5rF8HA/Ib3JOlF+AelBj0O8Aljr0OBJbL57LI5i+2QkfgKLswnwuQ==
+
 long@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/long/-/long-4.0.0.tgz#9a7b71cfb7d361a194ea555241c92f7468d5bf28"
