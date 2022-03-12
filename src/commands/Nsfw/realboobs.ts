@@ -16,7 +16,7 @@ export default class Command extends BaseCommand {
             description: `Will send you random school boobs images .`,
             aliases: ['rb'],
             category: 'nsfw',
-            usage: `${client.config.prefix}rb`,
+            usage: `${client.config.prefix}rboobs`,
             baseXp: 50
         })
     }
