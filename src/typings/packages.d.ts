@@ -28,3 +28,4 @@ declare module "discord-image-generation";
 declare module "discord-canvas";
 declare module "ordinal";
 declare module "images-generator";
+declare module "lolis.life";
