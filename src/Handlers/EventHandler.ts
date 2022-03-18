@@ -25,8 +25,8 @@ export default class EventHandler {
 					: event.action === "remove"
 					? `Goodbye *@${
 							event.participants[0].split("@")[0]
-					  }* 👋🏻, we're probably not gonna miss you.`
-					: `Ara Ara, looks like *@${
+					  }* 👋🏻, why did you even join this group at the first place if you weree to leave. don't come back Sayonara.`
+					: `Ufff, looks like *@${
 							event.participants[0].split("@")[0]
 					  }* got ${this.client.util.capitalize(event.action)}d${
 							event.actor ? ` by @${event.actor.split("@")[0]}` : ""
