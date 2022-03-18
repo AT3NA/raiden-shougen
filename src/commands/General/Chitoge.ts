@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
 		const chitoge =
-			"https://c.tenor.com/4TLYvKWI2mgAAAPo/nakano-yotsuba-smile.mp4";
+			"https://c.tenor.com/7iEFLDDGQbMAAAPo/majo-no-tabitabi-the-journey-of-elaina.mp4";
 		return void this.client.sendMessage(
 			M.from,
 			{ url: chitoge },
@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `⚡ *Elaina* ⚡\n\n🍀 *Description: A WhatsApp Bot With Rich NSFW features based on chitoge.*\n\n🌐 *OFFICIAL BOT URL: https://github.com/ShineiIchijo/Chitoge* \n\n 📒 *Guide: https://github.com/ShineiIchijo/Chitoge-Guides* \n\n 👾 *BOT URL:https://github.com/Whatup364/Yotsuba-Bot* \n`,
+				caption: `⚡ *Elaina* ⚡\n\n🍀 *Description: A WhatsApp Bot With Rich NSFW features based on chitoge.*\n\n🌐 *OFFICIAL BOT URL:https://github.com/Ronen6999/Elaina-bot* \n\n 📒 *Guide:https://github.com/Ronen6999/Elaina-bot* \n\n 👾 *BOT URL:https://github.com/Ronen6999/Elaina-bot* \n`,
 			}
 		);
 	};
