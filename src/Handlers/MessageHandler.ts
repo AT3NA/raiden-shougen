@@ -95,11 +95,11 @@ export default class MessageHandler {
 			)}`
 		   );
 			if (!command)
-			return void M.reply( await request.buffer(`https://c.tenor.com/uPVJO4UsB0MAAAPo/yotsuba-nakano-laugh.mp4`),
+			return void M.reply( await request.buffer(`https://c.tenor.com/Lu60IPsXTZsAAAPo/majo-no-tabitabi-the-journey-of-elaina.mp4`),
                     MessageType.video,
                     Mimetype.gif,
                     undefined,
-                    `No such command, Baka! Have you never seen someone use the command *${this.client.config.prefix}help*`,
+                    `No such command! Have you never seen someone use the command *${this.client.config.prefix}help*`,
                     undefined
                 )
 		const user = await this.client.getUser(M.sender.jid);
@@ -123,7 +123,7 @@ export default class MessageHandler {
 		}
 		if (command.config?.adminOnly && !M.sender.isAdmin)
 			return void M.reply(
-				`This command is only meant for the group admins, Baka!`
+				`Sorry this command is only meant for the group admins ask the Admin!`
 			);
 		try {
 			await command.run(M, this.parseArgs(args));
