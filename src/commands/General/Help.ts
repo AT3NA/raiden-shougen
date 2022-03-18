@@ -60,7 +60,7 @@ export default class Command extends BaseCommand {
             return void this.client.sendMessage(M.from, { url: chitoge }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `${text} 
- ──❅┈[ 𝒀𝒐𝒕𝒔𝒖𝒃𝒂 𝑩𝒐𝒕 ]┈❅───
+ ──❅┈[ *Elaina* 𝑩𝒐𝒕 ]┈❅───
 ┌────────────┈❅
 │   🧨 ELAINA
 │   ©️ ՏYᑎTᕼᗴՏIᘔᗴᗪ IᑎᖴIᑎITY
