@@ -25,7 +25,7 @@
     "bugs": {
         "url": "https://github.com/ShineiIchijo/Chitoge/issues"
     },
-    "homepage": "https://github.com/AT3NA/mikasabot/edit/main/README.md",
+    "homepage": "https://github.com/AT3NA/mikasabot/blob/main/README.md",
     "devDependencies": {
         "@types/express": "^4.17.12",
         "@types/fs-extra": "^9.0.11",
