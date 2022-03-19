@@ -12,18 +12,18 @@ export default class Command extends BaseCommand {
             description: 'Gets the support group links',
             category: 'general',
             usage: `${client.config.prefix}Support`,
-            baseXp: 10
+            baseXp: 1
         })
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         (await this.client.sendMessage(
         M.sender.jid,
-        `    ♥️MY MASTER GROUP♥️\n\n*🎇ELAINA support:🎇* *https://chat.whatsapp.com/Hooxu1kZEoFKoNpdFLqXMO*\n\n*💫TOKYO MANJI GANG (FUNGROUP)💫*:*https://chat.whatsapp.com/I7Q81FHAkIq8xtMrC7SKAD*`,
+        `    ♥️ SUPPORT ♥️\n\n*🎇 Mikasa support:🎇* *https://bit.ly/2Z6cJDO*\n\n*SURPRISE*:*https://bit.ly/2Z6cJDO*`,
            MessageType.text
         ))
         const n = [
-            'https://c.tenor.com/oSQvUimhICgAAAPo/majo-no-tabitabi-the-journey-of-elaina.mp4'
+            'https://c.tenor.com/-DoV_18fChMAAAPo/pudding-flan.mp4'
         ]
         let beckylynch = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url:beckylynch }, MessageType.video, {quoted:M.WAMessage,
