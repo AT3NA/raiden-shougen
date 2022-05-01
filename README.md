@@ -1,7 +1,7 @@
 <div align="center">
 <a href="https://github.com/iamherok/Cara_public"><img src="https://telegra.ph/file/39379bb23f8c2f171280c.jpg" alt="chitoge" border="0"></a>
 
-# **MIKASA ACKERMAN ☯️ : A WhatsApp BOT WITH RICH NSFW FEATURES BASED ON <a href="https://github.com/ShineiIchijo/Chitoge">CHITOGE</er></a></h1>**
+# **MIKASA ACKERMAN ☯️ : A WhatsApp BOT WITH RICH NSFW FEATURES.</h1>**
 
 [![CodeFactor](https://www.codefactor.io/repository/github/shineiichijo/chitoge/badge)](https://www.codefactor.io/repository/github/shineiichijo/chitoge)
 
