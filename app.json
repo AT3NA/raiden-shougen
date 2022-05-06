@@ -1,7 +1,7 @@
 {
     
-  "name": "MIKASA ACKERMAN",
-  "description": "A WhatsApp Bot With Rich  Features based on chitoge.",
+  "name": "Lelouch Lamperouge",
+  "description": "A WhatsApp Bot With Rich NSFW Features .",
   "keywords": [
       "bot",
       "whatsapp",
@@ -12,9 +12,9 @@
       "whatsapp-sticker-bot",
       "whatsapp-botto"
   ],
-  "website": "https://github.com/AT3NA/mikasabot/blob/main/README.md",
-  "repository": "https://github.com/AT3NA/mikasabot.git",
-  "logo": "https://static.wikia.nocookie.net/majo-no-tabitabi/images/2/2c/Elaina.png/revision/latest/top-crop/width/720/height/900?cb=20201007034555",
+  "website": "https://github.com/AT3NA/iamlelouch/blob/main/README.md",
+  "repository": "https://github.com/at3na.git",
+  "logo": "https://telegra.ph/file/46710ef22daada56d9c83.jpg",
   "success_url": "/",
   "env": {
       "PREFIX": {
