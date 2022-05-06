@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
         } catch (err) {
             M.reply(`Profile Picture not Accessible of ${username}`)
             pfp =
-                'https://www.linkpicture.com/q/OIP-depositphotos-bgremover.png'
+                'https://telegra.ph/file/4b77b1a9b8f8d1fe87217.png'
         }
         const exp = (await this.client.getUser(user)).Xp
         let role: string;
@@ -58,7 +58,7 @@ export default class Command extends BaseCommand {
 				} else if (exp < 100000) {
 					role = "💎 God";
 				} else {
-					role = "😈 Demon Lord (Highest role)";
+					role = "99th Holy Britannian Emperor (Highest role)";
 				}
 
 				let level: number;
@@ -86,7 +86,7 @@ export default class Command extends BaseCommand {
         await M.reply(
             await request.buffer(
                 pfp ||
-                    'https://cdn.donmai.us/original/04/b8/04b83e229baed4a8e83787d75b28a614.jpg'
+                    'https://telegra.ph/file/4b77b1a9b8f8d1fe87217.png'
             ),
             MessageType.image,
             undefined,
