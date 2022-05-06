@@ -9,7 +9,7 @@ import { ISimplifiedMessage } from "../../typings";
 export default class Command extends BaseCommand {
 	constructor(client: WAClient, handler: MessageHandler) {
 		super(client, handler, {
-			command: "mikasa",
+			command: "zero",
 			description: "Displays the info",
 			category: "general",
 			usage: `${client.config.prefix}elaina`,
@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
 		const chitoge =
-			"https://c.tenor.com/ZPyVOtzLYzsAAAPo/mikasa-ackerman-mikasa-season4.mp4";
+			"https://ahad-cloud.mirror-index.workers.dev/0:/Uploads/video_2022-05-06_03-04-31_7094454011202374656.mp4";
 		return void this.client.sendMessage(
 			M.from,
 			{ url: chitoge },
@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `💕 *Mikasa* 💕\n\n🍀 *Description: A WhatsApp Bot developed by *AT3NA* With Rich Anime features based on MIKASABOT.*\n\n🌐 *OFFICIAL BOT URL:https://github.com/AT3NA/mikasabot* \n\n 📒 *Guide:https://github.com/Ronen6999/Elaina-bot* \n\n 👾 *BOT URL:https://github.com/AT3NA/mikasabot* \n`,
+				caption: ` *Zero* \n\n🍀 *Description: A WhatsApp Bot developed by *HARAJIT* With Rich Anime features.*\n\n🌐 *OFFICIAL BOT URL:https://github.com/AT3NA/iamlelouch* \n\n 📒 *Guide:https://github.com/AT3NA/iamlelouch* \n\n 👾 *BOT URL:https://github.com/AT3NA/iamlelouch* \n`,
 			}
 		);
 	};
