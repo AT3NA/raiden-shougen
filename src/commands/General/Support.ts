@@ -19,11 +19,11 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage): Promise<void> => {
         (await this.client.sendMessage(
         M.sender.jid,
-        `    ♥️ SUPPORT ♥️\n\n*🎇 Mikasa support:🎇* *https://bit.ly/2Z6cJDO*\n\n*SURPRISE*:*https://bit.ly/2Z6cJDO*`,
+        `    ♥️ SUPPORT ♥️\n\n*🎇 LELOUCH SUPPORT:🎇* *https://t.me/asunamirror*\n\n*SURPRISE*:*https://t.me/asunamirror*`,
            MessageType.text
         ))
         const n = [
-            'https://c.tenor.com/-DoV_18fChMAAAPo/pudding-flan.mp4'
+            'https://ahad-cloud.mirror-index.workers.dev/0:/Uploads/video_2022-05-06_02-35-40_7094446503847251968.mp4'
         ]
         let beckylynch = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url:beckylynch }, MessageType.video, {quoted:M.WAMessage,
