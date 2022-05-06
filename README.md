@@ -1,7 +1,7 @@
 <div align="center">
-<a href="https://github.com/iamherok/Cara_public"><img src="https://telegra.ph/file/39379bb23f8c2f171280c.jpg" alt="chitoge" border="0"></a>
+<a href="https://github.com/iamherok/Cara_public"><img src="https://telegra.ph/file/46710ef22daada56d9c83.jpg" alt="chitoge" border="0"></a>
 
-# **MIKASA ACKERMAN ☯️ : A WhatsApp BOT WITH RICH NSFW FEATURES.</h1>**
+# **Lelouch Lamperouge : A WhatsApp BOT WITH RICH NSFW FEATURES.</h1>**
 
 [![CodeFactor](https://www.codefactor.io/repository/github/shineiichijo/chitoge/badge)](https://www.codefactor.io/repository/github/shineiichijo/chitoge)
 
@@ -26,12 +26,12 @@
 ## 💻 Deploy/Hosting Guide
 
 -   Section Moved to
-    [Chitoge-Guides](https://github.com/ShineiIchijo/Chitoge-Guides/blob/main/README.md)
+    [Mikasa-Guides](https://github.com/at3na/mikasabot/blob/main/README.md)
 
 ## 🍥 Features of the Repo
 
 -   To view all features, click
-    here➡️[Chitoge_featuresList.md](https://github.com/ShineiIchijo/Chitoge/blob/main/Features.md)
+    here➡️[Mikasa_featuresList.md](https://github.com/at3na/mikasabot/blob/main/Features.md)
 
 ## 💪 Contribution
 
@@ -54,14 +54,3 @@ for more information.
 ## 🎗Help
 Please give this repo a ⭐ if it helped you.
  
-## 🚀The WhatsApp bots that I recomended🚀
-<details>
-<summary>Click Here</summary>
-
-![Kaoi][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=PrajjwalDatir&repo=Kaoi&theme=buefy)](https://github.com/PrajjwalDatir/kaoi)
-
-![Chitoge][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=ShineiIchijo&repo=Chitoge&theme=buefy)](https://github.com/ShinNouzen/Chitoge)
-
-![Cara_public][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=iamherok&repo=Cara_public&theme=buefy)](https://github.com/iamherok/Cara_public)
-
-
