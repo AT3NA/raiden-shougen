@@ -1,6 +1,6 @@
 {
     
-  "name": "Lelouch Lamperouge",
+  "name": "Raiden Shogun",
   "description": "A WhatsApp Bot With Rich NSFW Features .",
   "keywords": [
       "bot",
@@ -12,9 +12,9 @@
       "whatsapp-sticker-bot",
       "whatsapp-botto"
   ],
-  "website": "https://github.com/AT3NA/iamlelouch/blob/main/README.md",
+  "website": "https://github.com/AT3NA/raiden-shougen/blob/main/README.md",
   "repository": "https://github.com/at3na.git",
-  "logo": "https://telegra.ph/file/46710ef22daada56d9c83.jpg",
+  "logo": "https://telegra.ph/file/d29e74c2d3bd096a71db8.png",
   "success_url": "/",
   "env": {
       "PREFIX": {
