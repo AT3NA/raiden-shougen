@@ -87,7 +87,7 @@
 | Enable  | Enables a command globally  |
 | Disable | Disables a command globally |
 
-| Educative | usage                   |
+| Educative |usage                   |
 | --------- | ----------------------- |
 | Crypto    | Sends you crypto values |
 | github | sends github account and repo link |
