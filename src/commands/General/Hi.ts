@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
 		const chitoge =
-			"https://ahad-cloud.mirror-index.workers.dev/0:/Uploads/video_2022-05-06_02-35-40_7094446503847251968.mp4";
+			"https://telegra.ph/file/4875548f91b92c63b7af1.mp4";
 		return void this.client.sendMessage(
 			M.from,
 			{ url: chitoge },
@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `Hello there, Zero Here. To defeat evil, I must become a greater evil . Use something from *${this.client.config.prefix}help* list if you want anything. \n`,
+				caption: `No salutations needed. My exalted status shall not be disclosed as we travel among the common folk. I acknowledge that you are a person of superior ability. Henceforth, you will be my guard. Worry not. Should any danger arise, I shall dispose of it . Use something from *${this.client.config.prefix}help* list if you want anything. \n`,
 			}
 		);
 	};
