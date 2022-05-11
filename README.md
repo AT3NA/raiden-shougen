@@ -26,7 +26,7 @@
 ## 💻 Deploy/Hosting Guide
 
 -   Section Moved to
-    [RAIDEN SHOUGEN GUIDES](https://github.com/at3na/mikasabot/blob/main/README.md)
+    [RAIDEN SHOUGEN GUIDES](https://youtu.be/KVrt3iKO4L0)
 
 ## 🍥 Features of the Repo
 
