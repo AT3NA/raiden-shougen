@@ -15,7 +15,7 @@ export default class Command extends BaseCommand {
 			description: "Will display the info of the bot",
 			category: "general",
 			usage: `${client.config.prefix}info`,
-			baseXp: 10000,
+			baseXp: 100,
 		});
 	}
 
@@ -41,7 +41,7 @@ export default class Command extends BaseCommand {
 		}
 		this.run = async (M: typings.ISimplifiedMessage): Promise<void> => {
 			const chitoge =
-				"https://ahad-cloud.mirror-index.workers.dev/0:/Uploads/video_2022-05-06_02-28-23_7094444621712323584.mp4";
+				"https://telegra.ph/file/a3bba103ea7daf132a3d6.mp4";
 			return void this.client.sendMessage(
 				M.from,
 				{ url: chitoge },
@@ -49,7 +49,7 @@ export default class Command extends BaseCommand {
 				{
 					quoted: M.WAMessage,
 					mimetype: Mimetype.gif,
-					caption: `━━━❰ *Lelouch Lamperouge* ❱━━━\n\n🔮 *Groups: ${
+					caption: `━━━❰ *RAIDEN-SHOUGEN* ❱━━━\n\n🔮 *Groups: ${
 				chats.length
 					}*\n\n🚦 *Uptime: ${uptime()}*\n\n🦆 *My cute people: ${users}*\n\n💢 *Banned Users: ${uban}*\n\n\n`,
 				}
