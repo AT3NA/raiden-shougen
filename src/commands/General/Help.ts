@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
             const n = [
-            'https://ahad-cloud.mirror-index.workers.dev/0:/Uploads/video_2022-05-06_02-21-06_7094442746977236992.mp4'
+            'https://telegra.ph/file/b726e1b41d4811d17eff0.mp4'
         ]
         let chitoge = n[Math.floor(Math.random() * n.length)]
 	if (!parsedArgs.joined) {
@@ -45,7 +45,7 @@ export default class Command extends BaseCommand {
             let text = `
 ╭─「(づ￣ 3￣)づ」
 │⋊ 𝕌𝕤𝕖𝕣: *${M.sender.username}*
-│⋊ ℕ𝕒𝕞𝕖: Lelouch Lamperouge ☮️
+│⋊ ℕ𝕒𝕞𝕖: RAIDEN SHOUGEN  ☮️
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩: ${this.client.config.prefix}
 │⋊ 𝕆𝕨𝕟𝕖𝕣: *${this.client.config.prefix}mod* Don't Ask Mods if you want to add me in your Group
 ╰────────────┈平和                            \n\n`
@@ -59,9 +59,9 @@ export default class Command extends BaseCommand {
             return void this.client.sendMessage(M.from, { url: chitoge }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `${text} 
- ──❅┈[ *Lelouch Lamperouge* ]┈❅───
+ ──❅┈[ *GOD OF ETERNITY* ]┈❅───
 ┌────────────┈❅
-│   ☯️Lelouch Lamperouge☮️
+│   ☯️ RAIDEN SHOUGEN ☮️
 │    ©ASUNA MIRROR
 └────────────┈⁂
 ❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
