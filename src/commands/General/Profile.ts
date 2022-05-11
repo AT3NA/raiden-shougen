@@ -35,30 +35,30 @@ export default class Command extends BaseCommand {
         } catch (err) {
             M.reply(`Profile Picture not Accessible of ${username}`)
             pfp =
-                'https://telegra.ph/file/4b77b1a9b8f8d1fe87217.png'
+                'https://telegra.ph/file/895787e1d1384273dcf56.jpg'
         }
         const exp = (await this.client.getUser(user)).Xp
         let role: string;
 				if (exp < 500) {
-					role = "🌸 Citizen";
+					role = "🌸 Inazuma Citizen";
 				} else if (exp < 1000) {
-					role = "🔎 Cleric";
+					role = "🔎 Inazuma Cleric";
 				} else if (exp < 2000) {
-					role = "🔮 Wizard";
+					role = "🔮 Inazuma Wizard";
 				} else if (exp < 5000) {
-					role = "♦️ Mage";
+					role = "♦️ Inazuma Mage";
 				} else if (exp < 10000) {
-					role = "🎯 Noble";
+					role = "🎯 Inazuma Noble";
 				} else if (exp < 25000) {
-					role = "✨ Elite";
+					role = "✨ Inazuma Elite";
 				} else if (exp < 50000) {
-					role = "🔶️ Legend";
+					role = "🔶️ Inazuma Legend";
 				} else if (exp < 75000) {
-					role = "🌀 Supreme";
-				} else if (exp < 100000) {
-					role = "💎 God";
+					role = "🌀 Inazuma Supreme";
+				} else if (exp < 10000000) {
+					role = "💎 Inazuma God";
 				} else {
-					role = "99th Holy Britannian Emperor (Highest role)";
+					role = "Teyvat God 😏";
 				}
 
 				let level: number;
@@ -78,7 +78,7 @@ export default class Command extends BaseCommand {
 					level = 7;
 				} else if (exp < 75000) {
 					level = 8;
-				} else if (exp < 100000) {
+				} else if (exp < 10000000) {
 					level = 9;
 				} else {
 					level = 10;
@@ -86,7 +86,7 @@ export default class Command extends BaseCommand {
         await M.reply(
             await request.buffer(
                 pfp ||
-                    'https://telegra.ph/file/4b77b1a9b8f8d1fe87217.png'
+                    'https://telegra.ph/file/895787e1d1384273dcf56.jpg'
             ),
             MessageType.image,
             undefined,
