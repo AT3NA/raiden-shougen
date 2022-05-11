@@ -1,7 +1,7 @@
 <div align="center">
-<a href="https://github.com/iamherok/Cara_public"><img src="https://telegra.ph/file/46710ef22daada56d9c83.jpg" alt="chitoge" border="0"></a>
+<a href="https://github.com/iamherok/Cara_public"><img src="https://telegra.ph/file/d29e74c2d3bd096a71db8.png" alt="chitoge" border="0"></a>
 
-# **Lelouch Lamperouge : A WhatsApp BOT WITH RICH NSFW FEATURES.</h1>**
+# **RAIDEN SHOUGEN: A WhatsApp BOT WITH RICH NSFW FEATURES BASED ON CHITOGE.</h1>**
 
 [![CodeFactor](https://www.codefactor.io/repository/github/shineiichijo/chitoge/badge)](https://www.codefactor.io/repository/github/shineiichijo/chitoge)
 
@@ -9,7 +9,7 @@
 
 > A Fully Modular and Efficient Bot <br>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/AT3NA/iamlelouch.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/AT3NA/raiden-shougen.git)
 
 </div><br/>
 <br/>
@@ -26,12 +26,12 @@
 ## 💻 Deploy/Hosting Guide
 
 -   Section Moved to
-    [Mikasa-Guides](https://github.com/at3na/mikasabot/blob/main/README.md)
+    [RAIDEN SHOUGEN GUIDES](https://github.com/at3na/mikasabot/blob/main/README.md)
 
 ## 🍥 Features of the Repo
 
 -   To view all features, click
-    here➡️[Mikasa_featuresList.md](https://github.com/at3na/mikasabot/blob/main/Features.md)
+    here➡️[Raiden_featuresList.md](https://github.com/at3na/mikasabot/blob/main/Features.md)
 
 ## 💪 Contribution
 
@@ -39,13 +39,7 @@
 -   Make sure to follow the ESLint Rules while editing the code and run
     `yarn run prettier-format` before opening PRs
 
-##  🚀 Official Bot Contributors
 
-<a href="https://github.com/ShineiIchijo/Chitoge/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ShineiIchijo/Chitoge" />
-</a>
-
-## I don't have any contributers LOL 😂
 ## 📄 License
 
 Distributed under the GNU AFFERO GENERAL PUBLIC License. See [LICENSE](/LICENSE)
