@@ -80,7 +80,7 @@ export default class Command extends BaseCommand {
 					})();
 					return {
 						categories,
-						pack: pack[1] || "Lelouch ",
+						pack: pack[1] || "RAIDEN SHOUGEN ⚡ ",
 						author: pack[2] || "Powered by ©asunamirror ( telegram) ⚡",
 						quality,
 						type: StickerTypes[
