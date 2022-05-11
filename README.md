@@ -31,7 +31,7 @@
 ## 🍥 Features of the Repo
 
 -   To view all features, click
-    here➡️[Raiden_featuresList.md](https://github.com/at3na/mikasabot/blob/main/Features.md)
+    here➡️[Raiden_featuresList.md](https://github.com/at3na/raiden-shougen/blob/main/Features.md)
 
 ## 💪 Contribution
 
