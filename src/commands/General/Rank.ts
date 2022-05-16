@@ -39,25 +39,25 @@ export default class Command extends BaseCommand {
 		const exp = (await this.client.getUser(user)).Xp;
 		let role: string;
 		if (exp < 500) {
-			role = "🌸 Citizen";
+			role = "🌸 Inazuma Citizen";
 		} else if (exp < 1000) {
-			role = "🔎 Cleric";
+			role = "🔎 Inazuma Cleric";
 		} else if (exp < 2000) {
-			role = "🔮 Wizard";
+			role = "🔮 Inazuma Wizard";
 		} else if (exp < 5000) {
-			role = "♦️ Mage";
+			role = "♦️ Inazuma Mage";
 		} else if (exp < 10000) {
-			role = "🎯 Noble";
+			role = "🎯 Inazuma Noble";
 		} else if (exp < 25000) {
-			role = "✨ Elite";
+			role = "✨ Inazuma Elite";
 		} else if (exp < 50000) {
-			role = "🔶️ Legend";
+			role = "🔶️ Inazuma Legend";
 		} else if (exp < 75000) {
-			role = "🌀 Supreme";
+			role = "🌀 Inazuma Supreme";
 		} else if (exp < 100000) {
-			role = "💎 God";
+			role = "💎 Inazuma God";
 		} else {
-			role = "😈 Demon Lord (Highest Level)";
+			role = "😈 Teyvat Lord (Highest Level)";
 		}
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let level: number;
@@ -77,7 +77,7 @@ export default class Command extends BaseCommand {
 			level = 7;
 		} else if (exp < 75000) {
 			level = 8;
-		} else if (exp < 100000) {
+		} else if (exp < 10000000) {
 			level = 9;
 		} else {
 			level = 10;
@@ -100,7 +100,7 @@ export default class Command extends BaseCommand {
 		} else if (exp < 75000) {
 			required = 75000;
 		} else if (exp < 100000) {
-			required = 100000;
+			required = 10000000;
 		} else {
 			required = 0;
 		}
