@@ -17,7 +17,7 @@ export default class Command extends BaseCommand {
 			dm: true,
 			usage: `${client.config.prefix}bc`,
 			modsOnly: true,
-			baseXp: 20000,
+			baseXp: 20000000,
 		});
 	}
 
@@ -46,7 +46,7 @@ export default class Command extends BaseCommand {
 			.map((jids) => (jids.includes("g.us") ? jids : null))
 			.filter((v) => v);
 		for (let i = 0; i < chats.length; i++) {
-			const text = `*📢[LELOUCH BROADCAST」📢*\n\n${term}\n\n Regards ~ *${M.sender.username}*`;
+			const text = `*📢[⚡INAZUMA⚡ BROADCAST」📢*\n\n${term}\n\n Regards ~ *${M.sender.username}*`;
 			this.client.sendMessage(chats[i], { url: selected }, MessageType.video, {
 				mimetype: Mimetype.gif,
 				caption: `${text}`,
