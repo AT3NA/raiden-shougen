@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
             const n = [
-            'https://telegra.ph/file/b726e1b41d4811d17eff0.mp4'
+            'https://telegra.ph/file/e2781bfddb646c5f11649.mp4'
         ]
         let chitoge = n[Math.floor(Math.random() * n.length)]
 	if (!parsedArgs.joined) {
@@ -45,7 +45,7 @@ export default class Command extends BaseCommand {
             let text = `
 ╭─「(づ￣ 3￣)づ」
 │⋊ 𝕌𝕤𝕖𝕣: *${M.sender.username}*
-│⋊ ℕ𝕒𝕞𝕖: RAIDEN SHOUGEN  ☮️
+│⋊ ℕ𝕒𝕞𝕖: RAIDEN SHOUGEN BY HARAJIT ☮️
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩: ${this.client.config.prefix}
 │⋊ 𝕆𝕨𝕟𝕖𝕣: *${this.client.config.prefix}mod* Don't Ask Mods if you want to add me in your Group
 ╰────────────┈平和                            \n\n`
