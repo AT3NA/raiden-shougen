@@ -68,10 +68,10 @@ export default class Command extends BaseCommand {
         role = "🔶️ Ace";
       } else if (exp < 75000) {
         role = "🌀 Hero";
-      } else if (exp < 100000) {
-        role = "💎 Supreme";
+      } else if (exp < 10000000) {
+        role = "⚡ INAZUMA GOD";
       } else {
-        role = "❄️ Mystic";
+        role = " 🌄 TAYVET GOD ";
       }
       let level: number;
       if (exp < 500) {
@@ -90,7 +90,7 @@ export default class Command extends BaseCommand {
         level = 7;
       } else if (exp < 75000) {
         level = 8;
-      } else if (exp < 100000) {
+      } else if (exp < 10000000) {
         level = 9;
       } else {
         level = 10;
