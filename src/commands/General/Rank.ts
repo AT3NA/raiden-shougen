@@ -54,7 +54,7 @@ export default class Command extends BaseCommand {
 			role = "🔶️ Inazuma Legend";
 		} else if (exp < 75000) {
 			role = "🌀 Inazuma Supreme";
-		} else if (exp < 100000) {
+		} else if (exp < 10000000) {
 			role = "💎 Inazuma God";
 		} else {
 			role = "😈 Teyvat Lord (Highest Level)";
