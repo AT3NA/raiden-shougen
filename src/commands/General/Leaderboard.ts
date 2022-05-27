@@ -71,7 +71,7 @@ export default class Command extends BaseCommand {
       } else if (exp < 10000000) {
         role = "⚡ INAZUMA GOD";
       } else {
-        role = " 🌄 TAYVET GOD ";
+        role = " 🌄 TEYVAT GOD ";
       }
       let level: number;
       if (exp < 500) {
